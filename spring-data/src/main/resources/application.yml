@@ -1,0 +1,22 @@
+server:
+  port: 8888
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/study
+    username: root
+    password: root
+  jpa:
+    show-sql: true
+    database: mysql
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL57Dialect
+mybatis:
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  type-aliases-package: com.study.data.dao.entity
+
+
